@@ -50,7 +50,7 @@ namespace Curso.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.Usão eSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Curso.API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Curso.API v1"));
             }
 
             app.UseHttpsRedirection();
