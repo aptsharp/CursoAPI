@@ -37,6 +37,5 @@ namespace Curso.API.Controllers
         {
             return Created("", registrarViewModelInput);
         }
-
     }
 }
