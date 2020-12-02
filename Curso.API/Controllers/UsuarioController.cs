@@ -12,6 +12,13 @@ namespace Curso.API.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
+
+        /// <summary>
+        ///  teste
+        /// </summary>
+        /// <param name="loginViewModelInput"></param>
+        /// <returns></returns>
+
         [HttpPost]
         [Route("logar")]
         public IActionResult Logar(LoginViewModelInput loginViewModelInput)
