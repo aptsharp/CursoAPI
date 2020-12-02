@@ -29,11 +29,12 @@ namespace Curso.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Curso.API", Version = "v1" });
-            //});
+            services.AddControllers()
+                .ConfigureApiBehaviorOptions(options =>
+                {
+                    options.SuppressModelStateInvalidFilter = true;
+                }); // para desabilitar as configurações padrão da Microsoft.
+
             services.AddSwaggerGen(c =>
             {
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
